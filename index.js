@@ -1,7 +1,31 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-  
-}
+    // let startIndex = 0;
+    // let endIndex = array.length - 1;
+    let j = 0;
+    for (const num of array) {
+      for (let i = 0; i < array.length; i++) {
+        if ((array[i] + num === target) && (i != j)) return true;
+      };
+      j++;
+    };
+    return false;
+};
+
+function hasTargetSum2(array, target) {
+      for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+          if ((array[i] + array[j] === target) && (i != j)) {
+          return true;
+          };
+        };
+      };
+    return false;
+};
+
+hasTargetSum([1, 2, 5], 4);
+
+
 
 /* 
   Write the Big O time complexity of your function here
