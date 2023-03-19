@@ -25,14 +25,20 @@ function hasTargetSum2(array, target) {
 
 hasTargetSum([1, 2, 5], 4);
 
+function hasTargetSum3(array, target) {
+
+};
 
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
   Add your pseudocode here
+
+  - probably can make a more efficient version by sorting the array first in ascending order, then if the current number is bigger than half the target number, we could stop checking the later half of the array. Same thing, if the number is smaller than half, we can start the index after the current number being checked. 
 */
 
 /*
